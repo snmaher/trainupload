@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html manifest="offline.appcache"> 
+<!--<html>--> 
+<head> 
+  <title>Title</title> 
+  <meta name="viewport" 
+        content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+
+  <link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />
+  <link rel="stylesheet" href="css/todo-bb.css" />
+
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.2.0.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbonevnew.js"></script>
+  <script src="js/backbone.localStorage.js"></script>
+  <script src="js/todo-bb.js"></script>
+  <script src="js/iscroll.js"></script>
+</head> 
+<body> 
+
+<div id="main" data-role="page">
+
+  <div data-role="header" data-position="fixed">
+   <h1></h1>
+  <h1 id="heading">{{-title}}</h1>
+ 
+    <div id ="buttons" data-role="controlgroup" data-type="horizontal" class="ui-btn-right">
+     <a id="preferencesbutton" data-role="button" data-icon="star" data-iconpos="right">Pref</a>
+     <a id="list2" data-role="button" data-icon="grid" data-iconpos="right" >Lists</a>
+     <a id="add" data-icon="plus" data-iconpos="right" data-role="button" >Add</a>
+     
+   </div> 
+   
+   <div id ="cancelnewlist" data-role="controlgroup" class="ui-btn-left">
+    <a id="cancelbutton" data-icon="delete" data-iconpos="right" data-role="button">Cancel</a>
+     <a id="newlistbutton" data-icon="plus" data-iconpos="right" data-role="button">New List</a>
+     </div>
+     
+  </div>
+  
+  <div id="dialogboxes" data-role="content">
+   <div id="newitem">
+      <input type="text" id="text1" placeholder="Enter To Do item"/>
+      <a id="save" data-role="button" data-inline="true" data-icon='plus'>Save</a>
+    </div>
+    <div id="newlist">
+          <input type="text" id="listtext" placeholder="Enter List Name"/>
+          <a id="savelist" data-role="button" data-inline="true" data-icon='plus'>Save</a>
+      </div>
+      
+       <div id="prefs">
+  
+  
+  <fieldset data-role="controlgroup">
+	<legend>Choose text size</legend>
+     	<input type="radio" name="text-size" id="small" value="small" checked="checked" />
+     	<label for="small">Small</label>
+
+     	<input type="radio" name="text-size" id="medium" value="medium"  />
+     	<label for="medium">Medium</label>
+
+     	<input type="radio" name="text-size" id="large" value="large"  />
+     	<label for="large">large</label>
+	</fieldset>
+    
+    <br/>
+    
+    <fieldset data-role="controlgroup">
+	<legend>Display Location</legend>
+     	<input type="radio" name="display-location" id="yes" value="yes"  />
+     	<label for="yes">Yes</label>
+
+     	<input type="radio" name="display-location" id="no" value="no"  checked="checked"/>
+     	<label for="no">No</label>
+	</fieldset>
+  
+  
+  </div>
+  </div>
+
+  <div id="content" data-role="content">	
+  
+    
+    <ul id="todolist" data-role="listview">
+      <li class = "eachitem">
+      
+        <span class="check" >{{done ? '&#10003;' : '&nbsp;'}}</span>
+
+        <span class="text" style="text-decoration:{{done ? 'line-through' :'none'}}">{{-itemtext}}</span>
+        
+        <br class="loc"/>
+        <span class="loc">Latitude: {{-latitude}}</span>
+        <br class="loc"/>
+        <span class="loc">Longitude: {{-longitude}}</span>
+        
+        <div id="delete_tm" class="delete" style="display:{{swipeon ? 'inline' :'none'}}">Delete</div>
+      </li>
+    </ul>
+     
+
+  </div>
+  
+  <div id="listcontent" data-role="content">	
+     
+    <ul id="alllist" data-role="listview">
+      <li>
+        
+        <span class="text">{{-listtext}}</span>
+         <div id="delete_tm" class="delete" style="display:{{swipeon ? 'inline' :'none'}}">Delete</div>
+      </li>
+    </ul>
+    
+
+  </div>
+
+
+</div>
+
+
+
+</body>
+</html>

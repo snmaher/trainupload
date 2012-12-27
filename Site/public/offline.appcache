@@ -1,0 +1,18 @@
+CACHE MANIFEST
+# version 1
+
+offline.html
+js/offline.js
+css/offline.css
+
+js/jquery.js
+js/jquery.mobile-1.2.0.js
+css/jquery.mobile-1.2.0.css
+
+js/underscore.js
+js/backbonevnew.js
+js/backbone.localStorage.js
+js/iscroll.js
+
+css/images/icons-18-white.png
+css/images/ajax-loader.png

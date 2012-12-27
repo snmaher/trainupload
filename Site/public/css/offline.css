@@ -1,0 +1,79 @@
+.tm {
+    display: none;
+}
+
+.loc {
+    display: none;
+}
+
+#newitem {
+  display: none;
+  height: 90px;
+}
+
+#newlist {
+  display: none;
+  height: 90px;
+}
+
+#save {
+  font-size: 8pt;
+}
+
+#savelist {
+  font-size: 8pt;
+}
+/*
+#text1 {
+  font-size: 8pt;
+}
+
+#listtext {
+  font-size: 8pt;
+}
+*/
+
+div #content {
+    overflow: hidden;
+    position: fixed;
+    top: 70px;
+    bottom: -1px;
+    left: 0px;
+    right: 0px;
+}
+
+div #listcontent {
+    overflow: hidden;
+    position: fixed;
+    top: 70px;
+    bottom: -60px;
+    left: 0px;
+    right: 0px;
+}
+
+#todolist span.check {
+  border: 2px solid #333; 
+  line-height: 20px; 
+  font-size: 20px;
+  width: 20px; 
+  height:20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+div.delete {
+ display: inline;
+  font-size: 8pt;
+  float: right;
+  border: 1px solid #900;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.18, rgb(173,0,0)),
+    color-stop(0.57, rgb(250,120,120))
+  );
+}
